@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neha Singh — Finance &amp; Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <span class="wordmark">NS</span>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <p class="hero-eyebrow">Finance &amp; Analytics</p>
+    <h1>Neha Singh reads numbers<br>the way most people read sentences.</h1>
+    <p class="hero-sub">A student of markets, models, and the stories hidden in a spreadsheet — turning raw data into decisions worth making.</p>
+
+    <dl class="stat-strip">
+      <div class="stat">
+        <dt>Focus</dt>
+        <dd>Financial Modeling</dd>
+      </div>
+      <div class="stat">
+        <dt>Tools</dt>
+        <dd>Excel · SQL · Python</dd>
+      </div>
+      <div class="stat">
+        <dt>Currently</dt>
+        <dd>Analytics Coursework</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="about" class="about wrap">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm a finance and analytics student who likes working where the two overlap — where a well-built model
+        answers a question a gut feeling can't. I spend most of my time in spreadsheets and datasets, looking
+        for the trend underneath the noise, and I'm just as interested in explaining a number clearly as I am
+        in calculating it correctly.
+      </p>
+      <svg class="about-chart" viewBox="0 0 220 120" role="img" aria-label="Upward trend line chart">
+        <line x1="0" y1="20" x2="220" y2="20" class="grid-line"/>
+        <line x1="0" y1="60" x2="220" y2="60" class="grid-line"/>
+        <line x1="0" y1="100" x2="220" y2="100" class="grid-line"/>
+        <polyline points="0,95 35,80 70,88 105,55 140,62 175,25 220,15" class="trend-line"/>
+        <circle cx="220" cy="15" r="4" class="trend-dot"/>
+      </svg>
+    </div>
+  </section>
+
+  <section id="skills" class="skills wrap">
+    <div class="section-head">
+      <h2>Skills</h2>
+    </div>
+    <table class="ledger">
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Capability</th>
+          <th class="num">Comfort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Financial Modeling</td>
+          <td>Forecasting, valuation, scenario analysis in Excel</td>
+          <td class="num">High</td>
+        </tr>
+        <tr>
+          <td>Data Analysis</td>
+          <td>Cleaning and querying datasets with SQL and Python</td>
+          <td class="num">High</td>
+        </tr>
+        <tr>
+          <td>Visualization</td>
+          <td>Dashboards and charts that make a case at a glance</td>
+          <td class="num">Medium</td>
+        </tr>
+        <tr>
+          <td>Statistics</td>
+          <td>Regression, hypothesis testing, probability</td>
+          <td class="num">Medium</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="projects" class="projects wrap">
+    <div class="section-head">
+      <h2>Projects</h2>
+    </div>
+    <ul class="ledger-list">
+      <li class="ledger-item">
+        <div class="ledger-item-top">
+          <h3>Portfolio Risk Dashboard</h3>
+          <span class="tag">Excel · Python</span>
+        </div>
+        <p>Built a model comparing risk-adjusted returns across a sample equity portfolio, with a one-page dashboard summarizing volatility and drawdown.</p>
+      </li>
+      <li class="ledger-item">
+        <div class="ledger-item-top">
+          <h3>Quarterly Spend Analysis</h3>
+          <span class="tag">SQL · Sheets</span>
+        </div>
+        <p>Queried and cleaned three quarters of transaction data to flag categories with the sharpest spend increases, presented as a short brief.</p>
+      </li>
+      <li class="ledger-item">
+        <div class="ledger-item-top">
+          <h3>Startup Valuation Case Study</h3>
+          <span class="tag">DCF · Comparables</span>
+        </div>
+        <p>Valued a hypothetical early-stage company using discounted cash flow and comparable-company methods, then reconciled the two.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-line">Open to internships and analyst roles in finance and analytics.</p>
+    <div class="contact-links">
+      <a href="mailto:neha.singh@example.com">neha.singh@example.com</a>
+      <a href="https://linkedin.com/in/nehasingh" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/nehasingh" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Neha Singh</span>
+    <span>Built with HTML, CSS &amp; JavaScript</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

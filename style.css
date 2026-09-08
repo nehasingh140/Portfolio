@@ -1,0 +1,377 @@
+/* ---- Tokens ---- */
+:root {
+  --ink: #16241C;
+  --ink-soft: #3C4C42;
+  --paper: #EEF0E6;
+  --paper-raised: #F7F8F2;
+  --line: #C7CDBD;
+  --gold: #B8862E;
+  --gold-deep: #8F6821;
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* ---- Header ---- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 10;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--ink);
+  padding: 4px 9px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+}
+
+/* ---- Hero ---- */
+.hero {
+  padding: 76px 24px 56px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold-deep);
+  margin: 0 0 18px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.2vw, 2.9rem);
+  line-height: 1.2;
+  max-width: 15ch;
+}
+
+.hero-sub {
+  max-width: 52ch;
+  color: var(--ink-soft);
+  font-size: 18px;
+  margin: 22px 0 0;
+}
+
+.stat-strip {
+  display: flex;
+  gap: 40px;
+  margin: 44px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.stat dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.stat dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ---- Section shared ---- */
+section {
+  padding: 56px 24px;
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+.section-head h2 {
+  font-size: 1.5rem;
+}
+
+/* ---- About ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+.about-chart {
+  width: 100%;
+  height: auto;
+}
+
+.grid-line {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.trend-line {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trend-dot {
+  fill: var(--gold-deep);
+}
+
+/* ---- Skills (ledger table) ---- */
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.ledger th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding: 0 12px 12px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ledger td {
+  padding: 14px 12px 14px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.ledger td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ledger .num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold-deep);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ledger th.num {
+  text-align: right;
+}
+
+/* ---- Projects (ledger list) ---- */
+.ledger-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ledger-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-item:first-child {
+  padding-top: 0;
+}
+
+.ledger-item-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.ledger-item h3 {
+  font-size: 1.1rem;
+}
+
+.ledger-item .tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold-deep);
+  white-space: nowrap;
+}
+
+.ledger-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+/* ---- Contact ---- */
+.contact-line {
+  color: var(--ink-soft);
+  max-width: 50ch;
+}
+
+.contact-links {
+  display: flex;
+  gap: 28px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 24px;
+}
+
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---- Accessibility ---- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--paper-raised);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-strip {
+    gap: 28px;
+  }
+
+  .ledger-item-top {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ledger td:first-child {
+    white-space: normal;
+  }
+}
